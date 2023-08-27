@@ -42,5 +42,10 @@ namespace MyTranslatorWindows
         {
             translatorPage.Source = new Uri(Statics.translate_uri);
         }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
