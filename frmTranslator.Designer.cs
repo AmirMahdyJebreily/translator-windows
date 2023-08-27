@@ -29,11 +29,48 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            translatorPage = new Microsoft.Web.WebView2.WinForms.WebView2();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            ((System.ComponentModel.ISupportInitialize)translatorPage).BeginInit();
+            SuspendLayout();
+            // 
+            // translatorPage
+            // 
+            translatorPage.AllowExternalDrop = true;
+            translatorPage.CreationProperties = null;
+            translatorPage.DefaultBackgroundColor = Color.White;
+            translatorPage.Dock = DockStyle.Fill;
+            translatorPage.Location = new Point(0, 0);
+            translatorPage.Name = "translatorPage";
+            translatorPage.Size = new Size(454, 561);
+            translatorPage.Source = new Uri("https://google.com", UriKind.Absolute);
+            translatorPage.TabIndex = 0;
+            translatorPage.ZoomFactor = 1D;
+            translatorPage.NavigationStarting += translatorPage_NavigationStarting;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(181, 26);
+            contextMenuStrip1.Text = "Settings";
+            // 
+            // frmTranslator
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Text = "Form1";
+            ClientSize = new Size(454, 561);
+            ContextMenuStrip = contextMenuStrip1;
+            Controls.Add(translatorPage);
+            Name = "frmTranslator";
+            Text = "My Translator Window";
+            Load += frmTranslator_Load;
+            ((System.ComponentModel.ISupportInitialize)translatorPage).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Microsoft.Web.WebView2.WinForms.WebView2 translatorPage;
+        private ContextMenuStrip contextMenuStrip1;
     }
 }
