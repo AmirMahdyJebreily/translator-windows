@@ -31,7 +31,6 @@
             components = new System.ComponentModel.Container();
             translatorPage = new Microsoft.Web.WebView2.WinForms.WebView2();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            notifyIcon1 = new NotifyIcon(components);
             ((System.ComponentModel.ISupportInitialize)translatorPage).BeginInit();
             SuspendLayout();
             // 
@@ -55,12 +54,6 @@
             contextMenuStrip1.Size = new Size(61, 4);
             contextMenuStrip1.Text = "Settings";
             // 
-            // notifyIcon1
-            // 
-            notifyIcon1.Text = "Translator";
-            notifyIcon1.Visible = true;
-            notifyIcon1.MouseDoubleClick += notifyIcon1_MouseDoubleClick;
-            // 
             // frmTranslator
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -70,7 +63,6 @@
             Controls.Add(translatorPage);
             Name = "frmTranslator";
             ShowIcon = false;
-            ShowInTaskbar = false;
             Text = "My Translator Window";
             Load += frmTranslator_Load;
             ((System.ComponentModel.ISupportInitialize)translatorPage).EndInit();
@@ -81,6 +73,5 @@
 
         private Microsoft.Web.WebView2.WinForms.WebView2 translatorPage;
         private ContextMenuStrip contextMenuStrip1;
-        private NotifyIcon notifyIcon1;
     }
 }
