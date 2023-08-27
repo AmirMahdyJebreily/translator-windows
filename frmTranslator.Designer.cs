@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTranslator));
             translatorPage = new Microsoft.Web.WebView2.WinForms.WebView2();
             contextMenuStrip1 = new ContextMenuStrip(components);
             ((System.ComponentModel.ISupportInitialize)translatorPage).BeginInit();
@@ -61,8 +62,8 @@
             ClientSize = new Size(454, 561);
             ContextMenuStrip = contextMenuStrip1;
             Controls.Add(translatorPage);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmTranslator";
-            ShowIcon = false;
             Text = "My Translator Window";
             Load += frmTranslator_Load;
             ((System.ComponentModel.ISupportInitialize)translatorPage).EndInit();
